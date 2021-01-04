@@ -568,31 +568,32 @@
 			  </div>
 			  <!-- Contact Form -->
 			  <div class="col-md-6 contact">
-			     <form role="form">
+			     <form role="form" method="post" action="/demande">
+                 @csrf
 				            <!-- Name -->
                             <div class="row">
                                 <div class="col-md-6">
 								    <!-- E-Mail -->
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Votre nom ">
+                                        <input required type="text" class="form-control" placeholder="Votre nom " name="name">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
 								    <!-- Phone Number -->
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Adresse Email">
+                                        <input required type="email" class="form-control" placeholder="Adresse Email" name="email">
                                     </div>
                                 </div>
                             </div>
 							<!-- Message Area -->
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Ecriver votre méssage ici..." style="height:232px;"></textarea>
+                                <textarea required name="message" class="form-control" placeholder="Ecriver votre méssage ici..." style="height:232px;"></textarea>
                             </div>
 							<!-- Subtmit Button -->
                             <button type="submit" class="btn btn-send">
                                 Envoyez votre méssage
                             </button>
-                        </form>
+                   </form>
 			  </div>
 			</div>
 			<br>
