@@ -46,12 +46,13 @@
 				<nav class="menu">
 				    <!-- Menu Links -->
 					<div class="icon-list">
-						<a href="/"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-						<a href=""><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-						<a href=""><i class="fa fa-fw fa-globe"></i><span>Service</span></a>
-						<a href=""><i class="fa fa-fw fa-picture-o"></i><span>Portfolio</span></a>
-						<a href=""><i class="fa fa-fw fa-rss"></i><span>Blog</span></a>
-						<a href=""><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
+						<a href="#top"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
+						<a href="#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
+						<a href="#service"><i class="fa fa-fw fa-globe"></i><span>Service</span></a>
+						<a href="#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Portfolio</span></a>
+						<a href="#blog"><i class="fa fa-fw fa-rss"></i><span>Blog</span></a>
+                        <a href="#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
+                        <a href="/register"><i class="fa fa-fw fa-sign-in"></i><span>Connexion</span></a>
 					</div>
 				</nav>
 			    </div>
@@ -136,7 +137,7 @@
           <!-- Service Box 1 -->
                   <div class="col-md-4 wp2 item">
                     <div class="icon">
-                      <i class="fa fa-camera"></i><!-- Icon -->
+                     <a href="#projets"><i class="fa fa-camera"></i></a> <!-- Icon -->
                     </div>
                     <h2>Dev Back-End</h2><!-- Title -->
                     <p> Développeur Back-End dans la mésure oû la fonctionnalité est ma priorité car ce qui fait la force de l'application
@@ -244,7 +245,7 @@
           <div class="container">
 		    <!-- Headline -->
             <div class="row">
-              <h1 class="arrow">
+              <h1 class="arrow" id="projets">
                 Mes projets les plus <span>récents</span>
               </h1>
             </div>
@@ -349,7 +350,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <a href="" class="outline-btn">Embocher Caleb Nsondé</a>
+                <a href="#emboche" class="outline-btn">Embocher Caleb Nsondé</a>
               </div>
             </div>
           </div>
@@ -530,7 +531,7 @@
         =========================== -->
         <section class="text-center section-padding contact-wrap" id="contact">
 		  <!-- To Top Button -->
-          <a href="" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+          <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
           <div class="container">
 		    <!-- Headline -->
             <div class="row">
@@ -568,7 +569,7 @@
 			  </div>
 			  <!-- Contact Form -->
 			  <div class="col-md-6 contact">
-			     <form role="form" method="post" action="/demande">
+			     <form role="form" method="post" action="/demande" id="emboche">
                  @csrf
 				            <!-- Name -->
                             <div class="row">
