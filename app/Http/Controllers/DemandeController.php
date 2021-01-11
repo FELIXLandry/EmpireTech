@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Demande;
+use Illuminate\Support\Facades\Auth;
+
 
 class DemandeController extends Controller
 {
@@ -21,6 +23,44 @@ class DemandeController extends Controller
         //dd($demande);
         $demande->save();
         return view('Demandes/show')->with(compact('demande'));
+    }
+
+  public function deconnexion()
+    {
+        Auth::logout();
+        return view('welcome');
+    }
+
+    public function dashboard(){
+        return view('Admin/dashboard');
+    }
+
+    public function user(){
+        return view('Admin/user');
+    }
+
+    public function icons(){
+        return view('Admin/icons');
+    }
+
+    public function maps(){
+        return view('Admin/maps');
+    }
+
+    public function notifications(){
+        return view('Admin/notifications');
+    }
+
+    public function table(){
+        return view('Admin/table');
+    }
+
+    public function template(){
+        return view('Admin/template');
+    }
+
+    public function typography(){
+        return view('Admin/typography');
     }
 
     public function index()

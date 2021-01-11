@@ -52,7 +52,13 @@
 						<a href="#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Portfolio</span></a>
 						<a href="#blog"><i class="fa fa-fw fa-rss"></i><span>Blog</span></a>
                         <a href="#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
-                        <a href="/register"><i class="fa fa-fw fa-sign-in"></i><span>Connexion</span></a>
+                        @if(Route::has('login'))
+                            @auth
+                        <a href="/deconnexion"><i class="fa fa-fw fa-sign-out"></i><span>Déconnexion</span></a>
+                        @else
+                        <a href="/login"><i class="fa fa-fw fa-sign-in"></i><span>Connexion</span></a>
+                            @endauth
+                        @endif
 					</div>
 				</nav>
 			    </div>
