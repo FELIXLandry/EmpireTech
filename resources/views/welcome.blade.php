@@ -227,11 +227,10 @@
 				<div class="col-md-6 about-text">
 					<h6>Autres</h6><!-- Headline-->
 					<p> A part l'école, le travail et tout ce qui concerne le monde professionel j'ai plusieurs distractions tels que rester
-              passer du temps avec mes potes, écouter la musique, regarder des films, séries dans mon pc et
-              ma série préferé c'est Prison break ce acteur (MS)  m'inspire beaucoups, je n'aime plus
-              trop la tv car avec mon pc je peux faire plusieurs choses, j'aime aussi jouer au jeux toujours dans mon
-              ordinateur, bon le piano je ne peux pas trop appeller ça passse temps car je le fais pour servir
-              Dieu donc... c'est ça même.
+              passer du temps avec mes collègues de classe, écouter de la musique, Assister à des conférences beaucoup plus sur le
+              domaine de l’informatique et de la finace, dans mon pays le Congo du 17 au 19 février 2020 c’était tenu une conférence
+              sur le numérique de la 2ème édition dont le thème était : la transformation digitale ou numérique « OPPORTUNITE ET MENACE »
+              cette conférence m’avait beaucoup inspiré surtout au moment où les intervenants parlaient sur l’intelligence artificielle.
           </p><br><!-- About Text 3 -->
 					<a href="" class="weight-outline-btn">Lire la suite</a><!-- read more button  -->
 				</div>
