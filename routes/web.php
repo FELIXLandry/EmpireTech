@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Docteur;
+use App\Models\Service;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,32 +17,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $services = Service::all();
+    $docteurs = Docteur::all();
+    return view('welcome')->with(compact('services','docteurs'));
 });
-route::post('/demande','DemandeController@demande');
+Route::post('/demande','DemandeController@demande');
 
-route::get('/demande/{id}/open','DemandeController@open');
+Route::get('/demande/{id}/open','DemandeController@open');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
-route::get('/deconnexion','DemandeController@deconnexion');
+Route::get('/deconnexion','DemandeController@deconnexion');
 
-route::get('/dashboard','DemandeController@dashboard')->middleware('auth');
+Route::get('/dashboard','DemandeController@dashboard')->middleware('auth');
 
-route::get('/icons','DemandeController@icons')->middleware('auth');
-
-route::get('/maps','DemandeController@maps')->middleware('auth');
-
-route::get('/notifications','DemandeController@notifications')->middleware('auth');
-
-route::get('/table','DemandeController@table')->middleware('auth');
-
-route::get('/template','DemandeController@template')->middleware('auth');
-
-route::get('/typography','DemandeController@typography')->middleware('auth');
-
-route::get('/upgrade','DemandeController@upgrade')->middleware('auth');
-
-route::get('/user','DemandeController@user')->middleware('auth');
+Route::resource('/services','Admin\ServiceController')->middleware('auth');
+Route::resource('/docteurs','Admin\DocteurController')->middleware('auth');
