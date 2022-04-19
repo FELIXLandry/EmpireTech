@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Docteur;
+use App\Models\Question;
 use App\Models\Service;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $services = Service::all();
     $docteurs = Docteur::all();
-    return view('welcome')->with(compact('services','docteurs'));
+    $questions = Question::all();
+    return view('welcome')->with(compact('services','docteurs','questions'));
 });
 Route::post('/demande','DemandeController@demande');
 
@@ -35,3 +37,4 @@ Route::get('/dashboard','DemandeController@dashboard')->middleware('auth');
 
 Route::resource('/services','Admin\ServiceController')->middleware('auth');
 Route::resource('/docteurs','Admin\DocteurController')->middleware('auth');
+Route::resource('/questions','Admin\QuestionController')->middleware('auth');
